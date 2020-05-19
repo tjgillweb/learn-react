@@ -7,14 +7,17 @@ import Person from './Person/Person';
 class App extends Component {
   state = {
     persons: [{
+        id: 'dsff',
         name: 'Max',
         age: 28
       },
       {
+        id: 'fsfs',
         name: 'Manu',
         age: 29
       },
       {
+        id: 'fsdf',
         name: 'Stephanie',
         age: 26
       }
@@ -42,7 +45,7 @@ class App extends Component {
   }
 
   deletePersonHandler = (personIndex) => {
-    //DONT USE THIS: it mutates the persons array 
+    //DONT USE THIS: it mutates the state 
     //const updatedPersons = this.state.persons; 
 
     //USE either slice() or ES6 spread operator: updates the state immutably
@@ -73,9 +76,10 @@ class App extends Component {
           {
             this.state.persons.map((person, index) => {
               return <Person 
-              click={() => this.deletePersonHandler(index)}
-              name={person.name} 
-              age={person.age} />
+              click= {() => this.deletePersonHandler(index)}
+              name= {person.name} 
+              age= {person.age}
+              key = {person.id} />
             })
           }
            
