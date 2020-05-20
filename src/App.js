@@ -60,10 +60,11 @@ class App extends Component {
       this.setState({showPersons : !doesShow});
   }
   render() {
-    const style = {
-      backgroundColor: 'white',
+    const myStyle = {
+      backgroundColor: 'green',
+      color: 'white',
       fontSize: '16px',
-      border: '1px solid #ccc',
+      border: '1px solid green',
       borderRadius: '5px',
       padding: '10px 20px',
       cursor: 'pointer'
@@ -86,12 +87,14 @@ class App extends Component {
            
         </div>
       )
+      myStyle.backgroundColor = 'red';
+      myStyle.border = '1px solid red';
     }
     return ( 
       <div className = "App" >
       <h1> Hi, I 'm a React App</h1>  
       <p> This is really working! </p>  
-      <button style = {style}
+      <button style = {myStyle}
               onClick = {this.togglePersonsHandler} > Toggle Persons 
       </button>
       {persons}
