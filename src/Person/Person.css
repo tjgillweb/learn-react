@@ -1,9 +1,8 @@
 .Person {
   background: #fefefe;
-  border: px solid #eee;
+  border: 1px solid #eee;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(188, 177, 178, 0.6);
-  width: 400px;
   height: auto;
   padding: 20px;
   text-align: center;
