@@ -1,4 +1,4 @@
-/* .Person {
+.Person {
   background: #fefefe;
   border: 1px solid #eee;
   border-radius: 10px;
@@ -8,7 +8,12 @@
   text-align: center;
   display: block;
   margin: 20px auto;
-} */
+}
+@media(min-width: 500px){
+  .Person{
+    width: 450px;
+  }
+}
 
 input[type=text] {
   font-family: "Rubik", sans-serif;
