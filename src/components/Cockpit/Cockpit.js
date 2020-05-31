@@ -5,10 +5,21 @@ const Cockpit = props => {
     useEffect(() => {
       console.log('[Cockpit.js] useEffect');
       //Http request...
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         alert('Saved data to cloud');
       }, 1000);
-    }, [props.persons]); // or pass an empty array if you want to run it once
+      return () => {
+        clearTimeout(timer);
+        console.log('[Cockpit.js] cleanup work in useEffect');
+      };
+    }, []); // or pass an empty array if you want to run it once
+
+    useEffect(() => {
+      console.log('[Cockpit.js] 2nd useEffect');
+      return () => {
+        console.log('[Cockpit.js] cleanup work in 2nd useEffect');
+      };
+    })
 
     const assignedClasses =[];
     if(props.persons.length <= 2){
