@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Rubik", sans-serif;
   background: #d9cffe;
+  text-align: center;
 }
 
 code {
