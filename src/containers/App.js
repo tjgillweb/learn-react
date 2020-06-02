@@ -16,7 +16,7 @@ class App extends Component {
     persons: [{
         id: 'dsff',
         name: 'Max',
-        age: 28
+        age: '28'
       },
       {
         id: 'fsfs',
